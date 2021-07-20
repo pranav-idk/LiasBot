@@ -8,6 +8,7 @@ exports.config = {
     category: "Staff Only",
 };
 const { exec } = require("child_process");
+const Discord = require('discord.js');
 
 const clean = text => {
     if (typeof (text) === "string")
@@ -16,7 +17,7 @@ const clean = text => {
         return text;
 }
 
-exports.run = async (_, message, args) => {
+exports.run = async (bot, message, args, config) => {
     if (args[0].toLowerCase() === "code") {
         try {
             const code = args.slice(1).join(" ");

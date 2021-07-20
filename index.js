@@ -28,10 +28,6 @@ bot.on('ready', () => {
 
 bot.on('guildMemberAdd', member => guildMemberAdd(bot, member));
 
-// bot.on('message', async message => {
-//     if (message.content.toLowerCase() === "!fire") return bot.emit('guildMemberAdd', message.member);
-// });
-
 bot.on('message', async message => {
     //Ignore bots amd webhooks
     if (message.author.bot) return;
